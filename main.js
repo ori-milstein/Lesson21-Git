@@ -4,13 +4,13 @@ function onBallClick(elBall) {
     var newWidth
     var newHeight
     var newText
-    if (+elBall.innerText >= '400') {
+    var randInc = getRandomInt(20, 61)
+
+    if (+elBall.innerText + randInc >= '400') {
         newWidth = '100px'
         newHeight = '100px'
         newText = '100'
     } else {
-        var randInc = getRandomInt(20, 61)
-
         newWidth = (!elBall.style.width) ?
             +(elBall.style.width.split('p')[0]) + 100 + randInc + 'px' :
             +(elBall.style.width.split('p')[0]) + randInc + 'px'
