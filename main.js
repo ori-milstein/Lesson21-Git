@@ -13,11 +13,11 @@ function onBallClick(elBall) {
 
         newWidth = (!elBall.style.width) ?
             +(elBall.style.width.split('p')[0]) + 100 + randInc + 'px' :
-            +(elBall.style.width.split('p')[0]) + randInc + + 'px'
+            +(elBall.style.width.split('p')[0]) + randInc + 'px'
         newHeight = (!elBall.style.height) ?
             +(elBall.style.height.split('p')[0]) + 100 + randInc + 'px' :
-            +(elBall.style.height.split('p')[0]) + randInc + + 'px'
-        newText = +elBall.innerText + randInc + ''
+            +(elBall.style.height.split('p')[0]) + randInc + 'px'
+        newText = +elBall.innerText + Math.round(randInc) + ''
     }
 
     elBall.style.width = newWidth
